@@ -20,7 +20,7 @@ function About() {
                         </Col>
 
                         <Col>
-                            <img src='/assets/tutor.PNG'></img>
+                            <img src='./assets/tutor.PNG'></img>
                         </Col>
 
                         
