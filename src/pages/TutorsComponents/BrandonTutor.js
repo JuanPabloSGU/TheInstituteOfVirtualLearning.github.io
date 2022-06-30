@@ -20,7 +20,7 @@ function About() {
                         </Col>
 
                         <Col>
-                            <img src='./InstituteVirtual.github.io/assets/tutor.PNG'></img>
+                            <img src='./InstituteVirtual.github.io/assets/tutor.png'></img>
                         </Col>
 
                         

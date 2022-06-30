@@ -18,7 +18,7 @@ function About() {
                         </Col>
 
                         <Col>
-                            <img src='./InstituteVirtual.github.io/assets/tutor_3.PNG'></img>
+                            <img src='./InstituteVirtual.github.io/assets/tutor_3.png'></img>
                         </Col>                        
                     </Row>
                 </Container>
