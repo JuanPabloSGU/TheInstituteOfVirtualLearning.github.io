@@ -7,7 +7,7 @@ function Maincard() {
             <section>
                 <Container className='py-2 pb-4'>
                 <Card className='bg-dark text-white'>
-                    <Card.Img src='assets/main-img.jpg' alt="Card image"/>
+                    <Card.Img src='./InstituteVirtual.github.io/main-img.jpg' alt="Card image"/>
                     <Card.ImgOverlay>
                     <Card.Title className='text-center p-4'>
                         <h1>
