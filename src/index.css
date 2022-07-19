@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Gantari&family=Old+Standard+TT&display=swap');
+
+#root {
+  font-family: 'Gantari', sans-serif;
+}
+
+.disabled-link {
+  pointer-events: none;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

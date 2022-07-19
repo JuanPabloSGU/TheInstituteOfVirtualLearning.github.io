@@ -12,6 +12,18 @@ function NavigationSecondary() {
                             The Insititute of Virtual Learning
                         </Link>
                     </Navbar.Brand>
+
+                    <Navbar.Toggle aria-controls='navbar-nav'/>
+
+                    <Navbar.Collapse>
+                        <Nav className='ms-auto'>
+                            <Nav.Link>
+                                <Link style={{ textDecoration: 'none', color: 'inherit' }} to='/' >
+                                    Home
+                                </Link>
+                            </Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
                 </Container>
             </Navbar>
         </>

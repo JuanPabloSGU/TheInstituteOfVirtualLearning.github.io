@@ -38,7 +38,7 @@ function Tutors() {
                     </Link>
                     </Col>
                     <Col className='justify-content-center'>
-                    <img src='./InstituteVirtual.github.io/assets/tutorCatherine.jpg' alt='card img'></img>
+                    <img src='./TheInstituteOfVirtualLearning.github.io/assets/tutorCatherine.jpg' alt='card img'></img>
                     </Col>
                 </Row>
                 <Row className='py-3'>
@@ -73,7 +73,7 @@ function Tutors() {
                     
                     </Col>
                     <Col>
-                    <img src='./InstituteVirtual.github.io/assets/tutorBrandon.jpg' alt='card img'></img>
+                    <img src='./TheInstituteOfVirtualLearning.github.io/assets/tutorBrandon.jpg' alt='card img'></img>
                     </Col>
                 </Row>
                 <Row className='pb-2'>
@@ -107,7 +107,7 @@ function Tutors() {
                     
                     </Col>
                     <Col>
-                    <img src='./InstituteVirtual.github.io/assets/tutorRaymond.jpg' alt='card img'></img>
+                    <img src='./TheInstituteOfVirtualLearning.github.io/assets/tutorRaymond.jpg' alt='card img'></img>
                     </Col>
                 </Row>
 
@@ -142,7 +142,7 @@ function Tutors() {
                     
                     </Col>
                     <Col>
-                    <img src='./InstituteVirtual.github.io/assets/tutorEmmy.jpg' alt='card img'></img>
+                    <img src='./TheInstituteOfVirtualLearning.github.io/assets/tutorEmmy.jpg' alt='card img'></img>
                     </Col>
                 </Row>
                 </Container>

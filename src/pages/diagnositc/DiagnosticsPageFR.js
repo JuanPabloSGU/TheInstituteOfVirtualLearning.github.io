@@ -1,9 +1,9 @@
-import NavigationSecondary from "../../components/navigationSecondary";
+import FooterDarkFR from "../../components/footerDarkFR";
+import NavigationBarSecondaryFR from "../../components/navigationSecondaryFR";
 import {Container, Card, Button, Col, Row, ProgressBar, Form} from 'react-bootstrap';
 import React from "react";
 import { useState } from 'react';
-import { questions } from '../../data/questions.js';
-import FooterDark from "../../components/footerdark";
+import { questionsFR } from '../../data/questionsFR.js';
 import {Modal} from 'react-bootstrap';
 import {
   Chart as ChartJS,
@@ -110,7 +110,7 @@ function Question(props) {
 
                             <Form>
                                 <Form.Group className="py-3 ">
-                                    <Form.Label>Answer : </Form.Label>
+                                    <Form.Label>Réponse : </Form.Label>
                                     <Container fluid>
                                         <Row className="py-2">
                                             <Col>
@@ -154,7 +154,7 @@ function CenteredModal(props) {
     var recentResult = results.slice(-1)[0];
 
     const labels = results.map((element, index) => {
-        return `Test : ${index + 1}`
+        return `Essayer : ${index + 1}`
     })
 
     ChartJS.register(
@@ -174,7 +174,7 @@ function CenteredModal(props) {
             },
             title: {
                 display: true,
-                text: 'Your Previous History',
+                text: 'Votre histoire précédente',
             },
         },
     }
@@ -183,7 +183,7 @@ function CenteredModal(props) {
         labels,
         datasets: [
             {
-                label: 'Diagnostic Score',
+                label: 'Score Diagnostique',
                 data : results,
                 backgroundColor : 'rgba(0, 128, 0, 0.4)'
             },
@@ -198,14 +198,14 @@ function CenteredModal(props) {
         >
         <Modal.Header closeButton>
             <Modal.Title>
-                You got a : {recentResult}/5
+                Vous avez un : {recentResult}/5
             </Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <Bar options={options} data={data} />
         </Modal.Body>
         <Modal.Footer>
-            <Button onClick={props.onHide}>Close</Button>
+            <Button onClick={props.onHide}>Fermer</Button>
         </Modal.Footer>
         </Modal>
     );
@@ -273,7 +273,7 @@ function results() {
 function QuestionList() {
     return (
         <div>
-            {questions.map((data, key) => (
+            {questionsFR.map((data, key) => (
                 <Question key={key} data={data} />
             ))}
         </div>
@@ -329,17 +329,17 @@ function DiagnosticsTest() {
                 <Container className="p-3">
                     <Card>
                         <Card.Title className="py-2 text-center">
-                            <h3>Diagnostic Test</h3>
-                            <h6 className="text-muted">Lets see how well you do!</h6>
+                            <h3>Test Diagnostique</h3>
+                            <h6 className="text-muted">Voyons à quel point vous vous en sortez !</h6>
                             <h6 className="text-muted">
-                                <Link style={{color:'inherit'}} to='/DiagnosticsPageFR'>Vous voulez passer ce test en français ?</Link>
+                                <Link style={{color:'inherit'}} to='/DiagnosticsPage'>Take the test in english</Link>
                             </h6>
                         </Card.Title>
 
                         <Card.Header>
                             <Row className="px-3">
                                 <Col>
-                                    <i class="bi bi-clock"></i> Time: {minutes} : {seconds}
+                                    <i class="bi bi-clock"></i> Minuteur: {minutes} : {seconds}
                                 </Col>
 
                                 <Col className="py-2">
@@ -348,7 +348,7 @@ function DiagnosticsTest() {
 
                                 <Col className="float-end">
                                     <Button className="float-end w-50" variant={runTimer ? "danger" : "primary"} onClick={toggerTimer}>
-                                            {runTimer ? "Stop" : "Start"}
+                                            {runTimer ? "Arrêt" : "Début"}
                                         </Button>
                                 </Col>
                             </Row>
@@ -356,7 +356,7 @@ function DiagnosticsTest() {
                         <Card.Text>
                             <QuestionList/>
                             <div className="text-center py-4">
-                                <Button className="text-center w-25" variant="success" onClick={()=>{setModalShow(true); results()}}>Submit</Button>
+                                <Button className="text-center w-25" variant="success" onClick={()=>{setModalShow(true); results()}}>Soumettre</Button>
 
                                 <CenteredModal show={modalShow} onHide={() => setModalShow(false)}></CenteredModal>
                             </div>
@@ -369,14 +369,14 @@ function DiagnosticsTest() {
     
 }
 
-function DiagnosticPage() {
+function DiagnositcsPageFR() {
     return (
         <>
-            <NavigationSecondary></NavigationSecondary>
+            <NavigationBarSecondaryFR></NavigationBarSecondaryFR>
             <DiagnosticsTest></DiagnosticsTest>
-            <FooterDark></FooterDark>
+            <FooterDarkFR></FooterDarkFR>
         </>
-    );
+    )
 }
 
-export default DiagnosticPage;
+export default DiagnositcsPageFR;
