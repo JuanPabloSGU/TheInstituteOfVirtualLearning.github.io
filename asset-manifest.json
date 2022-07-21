@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/TheInstituteOfVirtualLearning.github.io/static/css/main.66ed990b.css",
-    "main.js": "/TheInstituteOfVirtualLearning.github.io/static/js/main.31729fb4.js",
+    "main.js": "/TheInstituteOfVirtualLearning.github.io/static/js/main.89e8baef.js",
     "static/js/787.18aa368d.chunk.js": "/TheInstituteOfVirtualLearning.github.io/static/js/787.18aa368d.chunk.js",
     "index.html": "/TheInstituteOfVirtualLearning.github.io/index.html",
     "main.66ed990b.css.map": "/TheInstituteOfVirtualLearning.github.io/static/css/main.66ed990b.css.map",
-    "main.31729fb4.js.map": "/TheInstituteOfVirtualLearning.github.io/static/js/main.31729fb4.js.map",
+    "main.89e8baef.js.map": "/TheInstituteOfVirtualLearning.github.io/static/js/main.89e8baef.js.map",
     "787.18aa368d.chunk.js.map": "/TheInstituteOfVirtualLearning.github.io/static/js/787.18aa368d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.66ed990b.css",
-    "static/js/main.31729fb4.js"
+    "static/js/main.89e8baef.js"
   ]
 }
