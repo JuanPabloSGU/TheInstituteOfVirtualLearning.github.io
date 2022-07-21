@@ -16,7 +16,7 @@ function Maincard() {
                         
                     </Card.Title>
                     <Card.Text className='p-5 text-center lead'>
-                        Find tutors, videos and practice sheets and learn more about STEM topics
+                        Find tutors, videos and practice sheets to learn more about STEM topics
                     </Card.Text>
                     </Card.ImgOverlay>
                 </Card>

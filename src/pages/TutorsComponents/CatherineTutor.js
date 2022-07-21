@@ -12,7 +12,12 @@ function About() {
                             <h6 className="text-muted">Math Expert in Toronto <i class="bi bi-dot"></i> Apart of our team since October 27, 2015</h6>
 
                             <p className="py-2">
-                                Morbi nisl ligula, sollicitudin auctor faucibus condimentum, pellentesque sit amet purus. Aenean vitae nisi non felis elementum vestibulum quis ac ipsum. Sed et quam nulla. Duis erat risus, blandit nec sem rutrum, ultrices ullamcorper metus. Quisque blandit sapien ornare ante finibus blandit
+                                Catherine graduated from the University of Toronto with a Undergraduate Mathematics Program. She has a fundamental knowledge of Mathematics as she is pursuing her Masters at the University of Ottawa.
+
+                                <br></br>
+                                <br></br>
+
+                                Catherine has been with the Insititute of Virtual Learning for 7 years. She has tutored for many students throughout her years. 
                             </p>
                         
                         </Col>
@@ -117,9 +122,15 @@ function QuoteModal(props) {
 
     const [modalShow, setModalShow] = React.useState(false);
 
+    const submitButton = (event) => {
+        if(props.show) {
+            setModalShow(true)
+        }
+    }
+
     return (
         <>
-            <Button variant='primary' onClick={() => setModalShow(true)}>Obtain Quote</Button>
+            <Button type='submit' form='catherine-form' variant='primary' onClick={submitButton}>Obtain Quote</Button>
 
             <QuoteModalCentered data={props.data} show={modalShow} onHide={() => setModalShow(false)}/>
         </>
@@ -186,6 +197,24 @@ function PersonalizedBanner() {
         addinfo: addinfo,
     }
 
+    const [validated, setValidated] = useState(false);
+    const [show, setShow] = useState(false);
+
+    const handleSubmit = (event) => {
+        const form = event.currentTarget;
+
+        if(form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+            setShow(false);
+        }
+
+        event.preventDefault();
+        event.stopPropagation();
+        setValidated(true);
+        setShow(validated);
+    }
+
     return (
         <>
             <section className="bg-dark text-white">
@@ -200,24 +229,32 @@ function PersonalizedBanner() {
                                     </Card.Title>
 
                                     <Card.Text>
-
-                                        <Form className="p-2">
+                                        <Form className="p-2" id='catherine-form' noValidate validated={validated} onSubmit={handleSubmit}>
                                             <Row className="py-2">
                                                 <Form.Group as={Col}>
                                                     <Form.Label>Name</Form.Label>
-                                                    <Form.Control type="text" placeholder="Enter name" onChange={(event) => handleNameChange(event)}/>
+                                                    <Form.Control type="text" placeholder="Enter name" onChange={(event) => handleNameChange(event)} required/>
+                                                    <Form.Control.Feedback type='invalid'>
+                                                        Please provide a valid name
+                                                    </Form.Control.Feedback>
                                                 </Form.Group>
 
                                                 <Form.Group as={Col}>
                                                     <Form.Label>Email</Form.Label>
-                                                    <Form.Control type="email" placeholder='Enter email' onChange={(event) => handleEmailChange(event)}/>
+                                                    <Form.Control type="email" placeholder='Enter email' onChange={(event) => handleEmailChange(event)} required/>
+                                                    <Form.Control.Feedback type='invalid'>
+                                                        Please provide a valid email
+                                                    </Form.Control.Feedback>
                                                 </Form.Group>
                                             </Row>
 
                                             <Row className="py-2">
                                                 <Form.Group as={Col}>
                                                     <Form.Label>Phone Number</Form.Label>
-                                                    <Form.Control type="tel" placeholder='(ext: (000) 000-000)' onChange={(event) => handlePhoneChange(event)}/>
+                                                    <Form.Control type="tel" placeholder='(ext: (000) 000-000)' onChange={(event) => handlePhoneChange(event)} required/>
+                                                    <Form.Control.Feedback type='invalid'>
+                                                        Please provide a valid phone number
+                                                    </Form.Control.Feedback>
                                                 </Form.Group>
 
                                                 <Form.Group as={Col}>
@@ -280,7 +317,7 @@ function PersonalizedBanner() {
                                                 </Form.Group>
 
                                                 <Form.Group as={Col}>
-                                                    <Form.Label>Future GPA</Form.Label>
+                                                    <Form.Label>Desired GPA</Form.Label>
                                                     <Form.Select defaultValue="Select..." onChange={(event) => handleFutureGradeChange(event)}>
                                                         <option>Select...</option>
                                                         <option>A+	(97-100) 4.0</option>
@@ -309,7 +346,7 @@ function PersonalizedBanner() {
 
                                         <Row className="py-2 text-center">
                                             <Col className="">
-                                                <QuoteModal data={data}></QuoteModal>
+                                                <QuoteModal show={show} data={data}></QuoteModal>
                                             </Col>
                                         </Row>
                                         
@@ -343,7 +380,7 @@ function Education() {
                                     <div className="fw-bold">University of Ottawa - Masters</div>
 
                                     <div className="ms-2">
-                                        Aliquam porttitor feugiat purus, vitae faucibus dolor. Donec suscipit ac purus et mollis. Aenean eget turpis ultricies, varius ante vitae, commodo sem.
+                                        Currently Catherine is currently pursuing her masters in applied mathemicas while tutoring students.
                                     </div>
                                 </div>
                             </ListGroup.Item>
@@ -352,7 +389,7 @@ function Education() {
                                     <div className="fw-bold">Univserity of Toronto - Undergrad</div>
 
                                     <div className="ms-2">
-                                        Nulla hendrerit auctor massa vel aliquet. Nullam et nulla semper nisl tempus tincidunt. Nunc tincidunt turpis a maximus vulputate. 
+                                        Catherine graduated with Summa Cum Luade (with highest honor) in her degree of applied Mathematics.
                                     </div>
                                     
                                 </div>
@@ -398,8 +435,6 @@ function AddReview() {
     const handleShow = () => setShow(true);
 
     const handleClose = () => {
-        const newList = list.concat({data})
-        setList(newList)
         setShow(false);
     }
 
@@ -425,6 +460,26 @@ function AddReview() {
         setReview(event.target.value)
     }
 
+    const [validated, setValidated] = useState(false);
+
+    const handleSubmit = (event) => {
+        const form = event.currentTarget;
+
+        if(form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        }else {
+            event.preventDefault();
+            if(validated) {
+                const newList = list.concat({data})
+                setList(newList)
+                setShow(false)
+            }
+
+            setValidated(true)
+        }
+    }
+
     return(
         <>
 
@@ -441,7 +496,7 @@ function AddReview() {
                 <Modal.Title>Modal heading</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                <Form>
+                <Form noValidate validated={validated} onSubmit={handleSubmit} id='catherine-review-form'>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label>Name</Form.Label>
                         <Form.Control
@@ -468,12 +523,15 @@ function AddReview() {
                     controlId="exampleForm.ControlTextarea1"
                     >
                         <Form.Label>Review</Form.Label>
-                        <Form.Control as="textarea" rows={3} onChange={(event) => handleReviewChange(event)} />
+                        <Form.Control as="textarea" rows={3} onChange={(event) => handleReviewChange(event)} required/>
+                        <Form.Control.Feedback type='invalid'>
+                            Please enter a valid review
+                        </Form.Control.Feedback>
                     </Form.Group>
                 </Form>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="primary" onClick={handleClose}>
+                    <Button type='submit' form='catherine-review-form' variant="primary" onClick={handleSubmit}>
                         Save Changes
                     </Button>
                 </Modal.Footer>
@@ -485,21 +543,21 @@ function AddReview() {
 function Reviews() {
 
     const r1 = {
-        name: "John Doe",
+        name: "Justin",
         rating: "5/5 Rating",
-        review: "Ut finibus massa at arcu accumsan hendrerit. In volutpat scelerisque turpis, egestas bibendum lectus rutrum in. Pellentesque ornare ac justo non pulvinar.",
+        review: "She has really encouraged me to improve with my math skills.",
     }
 
     const r2 = {
-        name: "Jane Doe",
+        name: "Julia",
         rating: "5/5 Rating",
-        review: "Nullam euismod egestas libero vel fringilla. Vestibulum molestie nisl metus. Vestibulum tincidunt aliquam tortor, vitae luctus elit viverra eu.",
+        review: "She is one of the best tutors that I have had. She is really helpful to talk to and she can easily explain what she is thinking while solving a problem.",
     }
 
     const r3 = {
-        name: "Emma Doe",
+        name: "Emma",
         rating: "5/5 Rating",
-        review: "Mauris egestas ipsum id aliquam hendrerit. Curabitur suscipit turpis vel nulla maximus tincidunt. Aliquam non purus est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer non massa elit.",
+        review: "Catherine is really helpful when I can't understand some of the more abstract concepts that higher mathematics requires. I find that she can generally answer all of the questions that I have about a certain topic.",
     }
 
     return (

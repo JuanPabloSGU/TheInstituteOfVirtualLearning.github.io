@@ -66,9 +66,15 @@ function CenteredModal(props) {
 function ModalBooking(props) {
     const [modalShow, setModalShow] = React.useState(false);
 
+    const submitButton = (event) => {
+      if(props.show) {
+        setModalShow(true)
+      }
+    }
+
     return (
         <>
-            <Button variant='primary' onClick={() => setModalShow(true)}>Complete Booking</Button>
+          <Button type='submit' form='booktutor-form' variant='primary' onClick={submitButton}>Complete Booking</Button>
 
             <CenteredModal data={props.data} show={modalShow} onHide={() => setModalShow(false)}/>
         </>

@@ -30,7 +30,7 @@ function Subjects() {
                         <ListGroup.Item className='py-3' disabled>Earth Sciences</ListGroup.Item>
                         <ListGroup.Item className='py-3' disabled>Materials</ListGroup.Item>
                         <ListGroup.Item className='py-3' disabled>Space {'&'} Astronomy</ListGroup.Item>
-                        <ListGroup.Item className='py-3' action>Learn more  {'>'}</ListGroup.Item>
+                        <ListGroup.Item className='py-3' disabled>Learn more  {'>'}</ListGroup.Item>
                         </ListGroup>
                         
                     </section>
@@ -56,7 +56,7 @@ function Subjects() {
                         <ListGroup.Item className='py-3' disabled>Networking</ListGroup.Item>
                         <ListGroup.Item className='py-3' disabled>Security</ListGroup.Item>
                         <ListGroup.Item className='py-3' disabled>Databases</ListGroup.Item>
-                        <ListGroup.Item className='py-3' action>Learn more  {'>'}</ListGroup.Item>
+                        <ListGroup.Item className='py-3' disabled>Learn more  {'>'}</ListGroup.Item>
                         </ListGroup>
                     </section>
                     </Col>
@@ -80,7 +80,7 @@ function Subjects() {
                             </Link>
                         </ListGroup.Item>
                         <ListGroup.Item className='py-3' disabled>Biological</ListGroup.Item>
-                        <ListGroup.Item className='py-3' action>Learn more  {'>'}</ListGroup.Item>
+                        <ListGroup.Item className='py-3' disabled>Learn more  {'>'}</ListGroup.Item>
                         </ListGroup>
                     </section>
                     </Col>
@@ -105,7 +105,7 @@ function Subjects() {
                             Linear Algebra
                             </Link>
                         </ListGroup.Item>
-                        <ListGroup.Item className='py-3' action>Learn more  {'>'}</ListGroup.Item>
+                        <ListGroup.Item className='py-3' disabled>Learn more  {'>'}</ListGroup.Item>
                         </ListGroup>
                     </section>
                     </Col>

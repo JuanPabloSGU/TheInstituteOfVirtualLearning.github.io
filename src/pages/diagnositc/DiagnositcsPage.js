@@ -343,7 +343,7 @@ function DiagnosticsTest() {
                                 </Col>
 
                                 <Col className="py-2">
-                                    <ProgressBar now={50} />
+                                    {/* <ProgressBar now={50} /> */}
                                 </Col>
 
                                 <Col className="float-end">

@@ -50,6 +50,24 @@ function BookTutor() {
         setAddInfo(event.target.value)
     }
 
+    const [validated, setValidated] = useState(false);
+    const [show, setShow] = useState(false);
+
+    const handleSubmit = (event) => {
+        const form = event.currentTarget;
+
+        if(form.checkValidity() === false){
+            event.preventDefault();
+            event.stopPropagation();
+            setShow(false);
+        }
+
+        event.preventDefault();
+        event.stopPropagation();
+        setValidated(true);
+        setShow(validated)
+    }
+
     return (
         <>
             <section>
@@ -62,16 +80,22 @@ function BookTutor() {
                         <Card.Body>
                         <Card.Title className='text-center'>Fill out personal details to get started!</Card.Title>
 
-                            <Form>
+                            <Form id='booktutor-form' noValidate validated={validated} onSubmit={handleSubmit}>
                                 <Row className='p-3'>
                                     <Form.Group as={Col} controlId="bookTutorStuName">
                                         <Form.Label>Name</Form.Label>
-                                        <Form.Control type="text" placeholder="Enter name" onChange={(event) => handleNameChange(event)}/>
+                                        <Form.Control type="text" placeholder="Enter name" onChange={(event) => handleNameChange(event)} required/>
+                                        <Form.Control.Feedback type='invalid'>
+                                            Please provide a valid name
+                                        </Form.Control.Feedback>
                                     </Form.Group>
 
                                     <Form.Group as={Col} controlId="bookTutorStuEmail">
                                         <Form.Label>Email</Form.Label>
-                                        <Form.Control type="email" placeholder='Enter email' onChange={(event) => handleEmailChange(event)}/>
+                                        <Form.Control type="email" placeholder='Enter email' onChange={(event) => handleEmailChange(event)} required/>
+                                        <Form.Control.Feedback type='invalid'>
+                                            Please provide a valid email
+                                        </Form.Control.Feedback>
                                     </Form.Group>
                                 </Row>
 
@@ -102,12 +126,15 @@ function BookTutor() {
                                 <Row className='p-3'>
                                 <Form.Group as={Col} controlId="bookTutorSelectDate">
                                     <Form.Label>Select Date</Form.Label>
-                                    <Form.Control type="date" onChange={(event) => handleDateChange(event)}/>
+                                    <Form.Control type="date" onChange={(event) => handleDateChange(event)} required/>
+                                    <Form.Control.Feedback type='invalid'>
+                                        Please enter a valid date
+                                    </Form.Control.Feedback>
                                 </Form.Group>
 
                                 <Form.Group as={Col} controlId="bookTutorSelectDuration">
                                     <Form.Label>Select Duration of Session</Form.Label>
-                                    <Form.Select defaultValue="30 mins" onChange={(event) => handleDurationChange(event)}>
+                                    <Form.Select defaultValue="30 mins" onChange={(event) => handleDurationChange(event)} >
                                         <option>15 mins</option>
                                         <option>30 mins</option>
                                         <option>45 mins</option>
@@ -128,7 +155,7 @@ function BookTutor() {
 
                                 <Row className='pt-3'>
                                     <Col className='text-center'>
-                                        <ModalBooking data={data}/>
+                                        <ModalBooking show={show} data={data}/>
                                     </Col>
                                 </Row>
 

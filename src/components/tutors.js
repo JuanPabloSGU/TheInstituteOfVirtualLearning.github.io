@@ -11,14 +11,14 @@ function Tutors() {
                     <Col className='px-3 ms-auto' lg={8} md={6} sm={5}>
                     <h3>
                         <a>
-                        Catherine Turner
+                            Catherine Turner
                         </a>
                     </h3>
                     <h5 className='text-muted'>
                         Math Expert - Toronto
                     </h5>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam metus et augue hendrerit ultricies. 
+                        Catherine graduated from the University of Toronto with a Undergraduate Mathematics Program. She has a fundamental knowledge of Mathematics as she is pursuing her Masters at the University of Ottawa.
                     </p>
 
                     <div className='pb-3'>
@@ -26,9 +26,8 @@ function Tutors() {
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill">
+                        <i class="bi bi-star-fill"></i>
                         <p class="py-4 d-inline"> - (3 ratings)</p> 
-                        </i>
                     </div>
 
                     <Link to="/CatherineTutor">
@@ -45,14 +44,14 @@ function Tutors() {
                     <Col className='px-3 ms-auto' lg={8} md={6} sm={5}>
                     <h3>
                         <a>
-                        Brandon Hurley
+                            Brandon Hurley
                         </a>
                     </h3>
                     <h5 className='text-muted'>
                         Physics Expert - Montreal
                     </h5>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam metus et augue hendrerit ultricies. 
+                        Brandon is current pursuing his Doctorate at the University of British Columbia. Brandon has a deep understanding of physics ranging from highschool to master level topics. 
                     </p>
 
                     <div className='pb-3'>
@@ -60,9 +59,8 @@ function Tutors() {
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill">
+                        <i class="bi bi-star-fill"></i>
                         <p class="py-4 d-inline"> - (2 ratings)</p> 
-                        </i>
                     </div>
 
                     <Link to="/BrandonTutor">
@@ -84,10 +82,10 @@ function Tutors() {
                         </a>
                     </h3>
                     <h5 className='text-muted'>
-                        Mechanical Engineering Expert - Alberta
+                        Mechanical Engineering Expert - Calgary
                     </h5>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam metus et augue hendrerit ultricies. 
+                        Raymond graduated from the University of Toronto for his degree of Mechanical Engineering. Current Raymond has split his focus between teaching and pursuing his Masters at the University of Ottawa in Mechanical Engineering.
                     </p>
 
                     <div className='pb-3'>
@@ -96,7 +94,7 @@ function Tutors() {
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star"></i>
-                        <p class="py-4 d-inline"> - (1 ratings)</p> 
+                        <p class="py-4 d-inline"> - (1 rating)</p> 
                     </div>
 
                     <Link to="/RaymondTutor">
@@ -122,7 +120,7 @@ function Tutors() {
                         Network Expert - Vancouver
                     </h5>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam metus et augue hendrerit ultricies. 
+                        Emmy has graduated from the University of Toronto with a degree in Computer Science. Currently Emmy has been pursuing a masters at Ryerson University in Networking. She has an interest in mulitple disiciplines in computer science and has a great enjoyment tutoring students.
                     </p>
 
                     <div className='pb-3'>

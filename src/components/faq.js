@@ -19,7 +19,7 @@ function FAQ() {
                     </Accordion.Item>
 
                     <Accordion.Item eventKey="2">
-                    <Accordion.Header>Who can I contact about accessibility issues I ecountered on this site?</Accordion.Header>
+                    <Accordion.Header>Who can I contact about accessibility issues I encountered on this site?</Accordion.Header>
                     <Accordion.Body>The Insititute of Virutal Learning is committed to making this website accessilbe to all individuals. Please leave a message on our main page to keep us informed.</Accordion.Body>
                     </Accordion.Item>
 

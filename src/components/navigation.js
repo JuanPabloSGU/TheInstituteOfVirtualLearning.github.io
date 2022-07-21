@@ -1,4 +1,5 @@
 import {Nav, Navbar, Container} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Navigation() {
     return (
@@ -13,6 +14,11 @@ function Navigation() {
                             <Nav.Link href="#subjects">Subjects</Nav.Link>
                             <Nav.Link href="#testimonals">Testimonals</Nav.Link>
                             <Nav.Link href="#tutors">Tutors</Nav.Link>
+                            <Nav.Link >
+                                <Link style={{color: 'inherit', textDecoration: 'none'}} to="/DiagnosticsPage">
+                                    Diagnostic Test
+                                </Link>
+                            </Nav.Link>
                             <Nav.Link href="#faq">FAQ</Nav.Link>
                             <Nav.Link href="#contact">Contact</Nav.Link>
                     </Nav>
